@@ -119,12 +119,23 @@ app.use('/dashboard', (req, res, next) => {
   });
 }, isAuthenticated);
 
+
+
 app.get('/dashboard', (req, res) => {
   console.log("Redirecting to Dashboard")
   res.render('dashboard', { user: req.user });
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Assuming you have a route like this in your Express app
+app.get('/doctorAuth', (req, res) => {
+  // Some logic here...
+
+  // Render the 'doctorAuth.ejs' view with the errorMessage variable
+  res.render('doctorAuth', { errorMessage: 'Your error message here' });
+});
+
 
 const port = 4000;
 

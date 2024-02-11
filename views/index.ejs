@@ -25,7 +25,7 @@
           <!-- NAVIGATION MENUS -->
           <div class="menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li id="doctorButton">Doctor?</li>
   
             <li class"services">
             <a href="#">Services</a>
@@ -101,19 +101,24 @@
   </div>
 </section>
 
-<script >
+<script>
   document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('loginButton').addEventListener('click', function () {
-        // Redirect to the login.html page
-        window.location.href = 'login';
-      });
-
-      document.getElementById('signupButton').addEventListener('click', function () {
-        console.log("Signup button clicked");
-        window.location.href = 'signup';
-        // Add your logic for signup redirection or other actions here
-      });
+    document.getElementById('loginButton').addEventListener('click', function () {
+      // Redirect to the login.html page
+      window.location.href = 'login';
     });
+
+    document.getElementById('signupButton').addEventListener('click', function () {
+      console.log("Signup button clicked");
+      window.location.href = 'signup';
+    });
+
+    document.getElementById('doctorButton').addEventListener('click', function () {
+      console.log("Doctor button clicked");
+      window.location.href = 'doctorAuth';
+      // Add your logic for doctorAuth redirection or other actions here
+    });
+  });
 </script>
 </body>
 </html>
